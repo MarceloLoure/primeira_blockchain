@@ -9,9 +9,11 @@ module.exports = class Block {
         this.previousHash = previousHash;
         this.mineBlock(difficulty);
     }
+    // Método para gerar o hash do bloco
     generateHash() {
         return sha256(this.blockNumber + JSON.stringify(this.data) + this.timestamp + this.previousHash + this.nonce).toString();
     }
+    // Método para minerar o bloco
     mineBlock(prefix) {
         var _a;
         do {

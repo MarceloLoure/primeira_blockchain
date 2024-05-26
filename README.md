@@ -6,5 +6,5 @@ Após isso:
 
 npm run compile
 
-node src/index.js
+npm run start
 
